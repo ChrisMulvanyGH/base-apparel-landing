@@ -2,3 +2,34 @@
     box-sizing: border-box;
 }
 
+/* Typography */
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+/* Font Sizes */
+$body: 16px;
+
+/* Color Variables */
+$desatRed: hsl(0, 36%, 70%);
+$softRed: hsl(0, 93%, 68%);
+$darkGrayRed: hsl(0, 6%, 24%);
+
+/* Gradient Variables */
+$gradientOne: linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+$gradientTwo: linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+
+/* Targeted Screen Sizes */
+$mobile: 375px;
+$desktop: 1440px;
+
+/*------------------------------------------------------------------------------------------------*/
+
+
+body {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: $body;
+}
+
+/*------------------------------------------------------------------------------------------------*/
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
