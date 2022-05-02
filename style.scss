@@ -1,7 +1,4 @@
-*, *::before, *::after {
-    box-sizing: border-box;
-}
-
+/* ---------------------------------------- Style Setup ----------------------------------------*/
 /* Typography */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
 
@@ -21,15 +18,144 @@ $gradientTwo: linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
 $mobile: 375px;
 $desktop: 1440px;
 
-/*------------------------------------------------------------------------------------------------*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+/* Flexbox */
+.row {
+    display: flex;
+}
+
+.col{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-jc-cen {
+    justify-content: center;
+}
+
+.flex-ai-cen {
+    align-items: center;
+}
 
 
+body, h1, p {
+    margin: 0;
+}
+
+/* ---------------------------------------- Tags Setup ----------------------------------------*/
 body {
     font-family: 'Josefin Sans', sans-serif;
     font-size: $body;
+    font-weight: 400;
 }
 
-/*------------------------------------------------------------------------------------------------*/
+img {
+    max-width: 100%;
+}
+
+h1 {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: 2rem;
+}
+
+p {
+    font-family: 'Josefin Sans', sans-serif;
+    font-size: $body;
+
+}
+
+/* ---------------------------------------- Class Setup ----------------------------------------*/
+.container{
+    width: 80vw;
+    height: 100vh;
+    max-width: $mobile;
+    margin: 0 auto;
+}
+
+.top-row {
+    width: 375px;
+    height: 84px;
+    background-color: white;
+    
+    .logo {
+    max-width: 101px;
+    max-height: 21px;
+    }
+}
+
+.hero {
+    max-width: 100%;
+    height: 250px;
+    margin-bottom: 66px;
+}
+
+.main-body {
+    padding: 0 28px;
+    text-align: center;
+}
+
+.title {
+    font-weight: 600;
+    letter-spacing: 1rem;
+    color: $darkGrayRed;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+}
+
+.top-line {
+    display: block;
+    font-size: 1.875rem;
+    font-weight: 300;
+    letter-spacing: 1rem;
+    text-transform: uppercase;
+    color: $desatRed;
+}
+
+.details {
+    color: $desatRed;
+    font-weight: 300;
+    margin-bottom: 40px;
+}
+
+.subForm {
+    display: flex;
+    justify-content: center;
+}
+
+.emailAddr {
+    padding-left: 25px;
+    width: 311px;
+    height: 48px;
+    font-family: 'Josefin Sans', sans-serif;
+    font-weight: 400;
+    color: $desatRed;
+    border: 1px solid $desatRed;
+    border-radius: 24px;
+    margin-bottom: 92px;
+}
+
+.subBtn {
+    margin-left: -60px;
+    width: 60px;
+    height: 48px;
+    background-color: $softRed;
+    font-size: $body;
+    color: white;
+    border: 1px solid $desatRed;
+    border-radius: 24px;
+}
+
+.msg-hide {
+    display: none;
+}
+
+.msg-show {
+    display: block;
+    margin-top: 1rem;
+}
 
 .attribution { font-size: 11px; text-align: center; }
 .attribution a { color: hsl(228, 45%, 44%); }
