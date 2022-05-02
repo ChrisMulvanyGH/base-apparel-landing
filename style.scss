@@ -9,7 +9,13 @@ $body: 16px;
 $desatRed: hsl(0, 36%, 70%);
 $softRed: hsl(0, 93%, 68%);
 $darkGrayRed: hsl(0, 6%, 24%);
+/* Gradient Colours */
 $white: hsl(0, 0%, 100%);
+$offWhite: hsl(0, 100%, 98%);
+$lightPink: hsl(0, 80%, 86%);
+$mediumPink: hsl(0, 74%, 74%);
+
+$linear-deg: 135deg;
 
 /* Targeted Screen Sizes */
 $mobile: 375px;
@@ -44,6 +50,7 @@ body, h1, p {
 
 /* ---------------------------------------- Tags Setup ----------------------------------------*/
 body {
+    background: linear-gradient($linear-deg, from $white to $offWhite);
     font-family: 'Josefin Sans', sans-serif;
     font-size: $body;
     font-weight: 400;
@@ -130,7 +137,6 @@ p {
     color: $desatRed;
     border: 1px solid $desatRed;
     border-radius: 1.5rem;
-    margin-bottom: 5.75rem;
 }
 
 .subBtn {
@@ -152,7 +158,12 @@ p {
 
 .msg-show {
     display: block;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
+    color: $desatRed;
+}
+
+footer {
+    margin-top: 5.75em;
 }
 
 .attribution { font-size: 11px; text-align: center; }
