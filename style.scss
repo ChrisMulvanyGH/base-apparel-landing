@@ -1,58 +1,36 @@
-/* ---------------------------------------- Style Setup ----------------------------------------*/
 /* Typography */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
-
-/* Font Sizes */
-$body: 16px;
 
 /* Color Variables */
 $desatRed: hsl(0, 36%, 70%);
 $softRed: hsl(0, 93%, 68%);
 $darkGrayRed: hsl(0, 6%, 24%);
+
 /* Gradient Colours */
 $white: hsl(0, 0%, 100%);
 $offWhite: hsl(0, 100%, 98%);
 $lightPink: hsl(0, 80%, 86%);
 $mediumPink: hsl(0, 74%, 74%);
-
 $linear-deg: 135deg;
 
 /* Targeted Screen Sizes */
 $mobile: 375px;
 $desktop: 1440px;
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: border-box;
 }
-
-/* Flexbox */
-.row {
-    display: flex;
-}
-
-.col{
-    display: flex;
-    flex-direction: column;
-}
-
-.flex-jc-cen {
-    justify-content: center;
-}
-
-.flex-ai-cen {
-    align-items: center;
-}
-
 
 body, h1, p {
     margin: 0;
 }
 
-/* ---------------------------------------- Tags Setup ----------------------------------------*/
 body {
-    background: linear-gradient($linear-deg, from $white to $offWhite);
+    background-color: lightpink;
     font-family: 'Josefin Sans', sans-serif;
-    font-size: $body;
+    font-size: 1em;
     font-weight: 400;
 }
 
@@ -61,110 +39,119 @@ img {
 }
 
 h1 {
-    font-family: 'Josefin Sans', sans-serif;
+    font-family: inherit;
     font-size: 2rem;
 }
 
 p {
-    font-family: 'Josefin Sans', sans-serif;
-    font-size: $body;
+    font-family: inherit;
+    font-size: 1em;
 
 }
 
-/* ---------------------------------------- Class Setup ----------------------------------------*/
+/*--*/
+
+.col {
+    display: flex;
+    flex-direction: column;
+}
+
+.jc-center {
+    justify-content: center;
+}
+
+/*--*/
+
 .container{
-    width: 80vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 90vw;
     height: 100vh;
     max-width: $mobile;
     margin: 0 auto;
 }
 
-.top-row {
-    width: 375px;
+.header {
+    width: 100%;
+    max-width: $mobile;
     height: 84px;
     background-color: $white;
-    
+
     .logo {
-    max-width: 101px;
-    max-height: 21px;
+        margin-left: 2rem;
+        max-width: 101px;
+        max-height: 21px;
     }
 }
 
 .hero {
-    max-width: 100%;
-    height: 250px;
-    margin-bottom: 66px;
+    background-color: $white;
 }
 
-.main-body {
-    padding: 0 28px;
+.detail {
+    padding: 4.25em 1.6em;
     text-align: center;
-}
+    background-color: $white;
+    
+    .top-line {
+        display: block;
+        font-weight: 300;
+        letter-spacing: 1rem;
+        text-transform: uppercase;
+        color: $desatRed;
+    }
 
-.title {
-    font-weight: 600;
-    letter-spacing: 1rem;
-    color: $darkGrayRed;
-    text-transform: uppercase;
-    margin-bottom: 30px;
-}
+    .title {
+        font-weight: 600;
+        letter-spacing: 1rem;
+        color: $darkGrayRed;
+        text-transform: uppercase;
+        margin-bottom: 30px;
+    }
 
-.top-line {
-    display: block;
-    font-size: 1.875rem;
-    font-weight: 300;
-    letter-spacing: 1rem;
-    text-transform: uppercase;
-    color: $desatRed;
-}
+    .desc {
+        font-size: .8rem;
+        font-weight: 400;
+        color: $desatRed;
+        margin-bottom: 2.5em;
+    }
+    
+    .form {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        border-radius: 1.5rem;
+        border: 1px solid $desatRed;
 
-.details {
-    color: $desatRed;
-    font-weight: 300;
-    margin-bottom: 40px;
-}
+        .emailAddr {
+            width: 100%;
+            height: 3rem;
+            padding-left: 1.5rem;
+            background-color: transparent;
+            font-size: 1rem;
+            // border-radius: 50px 0 0 50px;
+            border: none;
+            outline: none;
+        }
 
-.subForm {
-    display: flex;
-    justify-content: center;
+        .emailAddr::placeholder {
+            font-size: 1em;
+            font-family: 'Josefin Sans', sans-serif;
+            color: $desatRed;
+        }
+    
+        .subBtn {
+            top: 0;
+            width: 4.5rem;
+            height: 49px;
+            background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+            font-size: 1.2rem;
+            color: $white;
+            border-style: none;
+            border-radius: 1.4rem;
+            box-shadow: 0px 15px 20px rgba(198, 108, 108, 0.25);
+            cursor: pointer;
+        }
+    }
 }
-
-.emailAddr {
-    width: 100%;
-    max-width: 19.5rem;
-    min-height: 3rem;
-    padding-left: 1.5rem;
-    color: $desatRed;
-    border: 1px solid $desatRed;
-    border-radius: 1.5rem;
-}
-
-.subBtn {
-    margin-left: -60px;
-    width: 3.75rem;
-    height: 3rem;
-    background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-    font-size: 1.5rem;
-    color: hsl(0, 0%, 100%);
-    border: transparent;
-    border-radius: 1.5rem;
-    box-shadow: 0px 15px 20px rgba(198, 108, 108, 0.25);
-    cursor: pointer;
-}
-
-.msg-hide {
-    display: none;
-}
-
-.msg-show {
-    display: block;
-    margin-top: 0.5rem;
-    color: $desatRed;
-}
-
-footer {
-    margin-top: 5.75em;
-}
-
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
