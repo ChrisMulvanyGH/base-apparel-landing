@@ -1,6 +1,6 @@
 /* Get the required form elements */
 var myForm = document.querySelector('.subForm');
-var myField = document.querySelector('.emailAddr');
+var myField = document.querySelector('.subEmail');
 var myBtn = document.querySelector('.subBtn');
 var myMsg = document.querySelector('.msg');
 var emailRegex = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;

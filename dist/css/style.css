@@ -1,23 +1,65 @@
-/* ---------------------------------------- Style Setup ----------------------------------------*/
 /* Typography */
 @import url("https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap");
-/* Font Sizes */
 /* Color Variables */
 /* Gradient Colours */
 /* Targeted Screen Sizes */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
 
-/* Flexbox */
-.row {
+body,
+h1,
+p {
+  margin: 0;
+}
+
+body {
+  background-color: #fff5f5;
+  background-image: linear-gradient(135deg, white, #fff5f5);
+  font-family: 'Josefin Sans', sans-serif;
+  font-size: 1em;
+  font-weight: 400;
+}
+
+img {
+  max-width: 100%;
+}
+
+h1 {
+  font-family: inherit;
+  font-size: 2rem;
+}
+
+p {
+  font-family: inherit;
+  font-size: 1em;
+}
+
+/* LAYOUT */
+.container {
+  width: 90%;
+  max-width: 375px;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0 auto;
 }
 
-.col {
+.sect-a {
+  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -27,75 +69,58 @@
           flex-direction: column;
 }
 
-.flex-jc-cen {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.flex-ai-cen {
+.sect-a .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-body, h1, p {
-  margin: 0;
-}
-
-/* ---------------------------------------- Tags Setup ----------------------------------------*/
-body {
-  background: linear-gradient(135deg, from white to #fff5f5);
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 16px;
-  font-weight: 400;
-}
-
-img {
-  max-width: 100%;
-}
-
-h1 {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 2rem;
-}
-
-p {
-  font-family: 'Josefin Sans', sans-serif;
-  font-size: 16px;
-}
-
-/* ---------------------------------------- Class Setup ----------------------------------------*/
-.container {
-  width: 80vw;
-  height: 100vh;
-  max-width: 375px;
-  margin: 0 auto;
-}
-
-.top-row {
-  width: 375px;
+  width: 100%;
   height: 84px;
   background-color: white;
 }
 
-.top-row .logo {
+.sect-a .header .logo {
+  margin-left: 2rem;
   max-width: 101px;
   max-height: 21px;
 }
 
-.hero {
-  max-width: 100%;
-  height: 250px;
-  margin-bottom: 66px;
+.sect-a .hero {
+  background-color: white;
 }
 
-.main-body {
-  padding: 0 28px;
+.sect-a .hero .hero-img {
+  width: 100%;
+}
+
+.sect-b {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.sect-b .detail {
+  padding: 4.25em 1.6em;
   text-align: center;
+  background-color: white;
 }
 
-.title {
+.sect-b .detail .top-line {
+  display: block;
+  font-weight: 300;
+  letter-spacing: 1rem;
+  text-transform: uppercase;
+  color: #ce9797;
+}
+
+.sect-b .detail .title {
   font-weight: 600;
   letter-spacing: 1rem;
   color: #413a3a;
@@ -103,74 +128,82 @@ p {
   margin-bottom: 30px;
 }
 
-.top-line {
-  display: block;
-  font-size: 1.875rem;
-  font-weight: 300;
-  letter-spacing: 1rem;
-  text-transform: uppercase;
+.sect-b .detail .desc {
+  font-size: .84rem;
+  font-weight: 400;
   color: #ce9797;
+  margin-bottom: 2.5em;
 }
 
-.details {
-  color: #ce9797;
-  font-weight: 300;
-  margin-bottom: 40px;
-}
-
-.subForm {
+.sect-b .detail .subForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.emailAddr {
-  width: 100%;
-  max-width: 19.5rem;
-  min-height: 3rem;
-  padding-left: 1.5rem;
-  color: #ce9797;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 1.5rem;
   border: 1px solid #ce9797;
-  border-radius: 1.5rem;
 }
 
-.subBtn {
-  margin-left: -60px;
-  width: 3.75rem;
+.sect-b .detail .subForm .subEmail {
+  width: 100%;
   height: 3rem;
+  padding-left: 1.5rem;
+  background-color: transparent;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+.sect-b .detail .subForm .subEmail::-webkit-input-placeholder {
+  font-size: 1em;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #ce9797;
+}
+
+.sect-b .detail .subForm .subEmail:-ms-input-placeholder {
+  font-size: 1em;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #ce9797;
+}
+
+.sect-b .detail .subForm .subEmail::-ms-input-placeholder {
+  font-size: 1em;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #ce9797;
+}
+
+.sect-b .detail .subForm .subEmail::placeholder {
+  font-size: 1em;
+  font-family: 'Josefin Sans', sans-serif;
+  color: #ce9797;
+}
+
+.sect-b .detail .subForm .subBtn {
+  top: 0;
+  width: 4.5rem;
+  height: 49px;
   background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   color: white;
-  border: transparent;
-  border-radius: 1.5rem;
+  border-style: none;
+  border-radius: 1.4rem;
   -webkit-box-shadow: 0px 15px 20px rgba(198, 108, 108, 0.25);
           box-shadow: 0px 15px 20px rgba(198, 108, 108, 0.25);
   cursor: pointer;
 }
 
-.msg-hide {
+.sect-b .detail .msg-hide {
   display: none;
 }
 
-.msg-show {
+.sect-b .detail .msg-show {
   display: block;
   margin-top: 0.5rem;
   color: #ce9797;
-}
-
-footer {
-  margin-top: 5.75em;
-}
-
-.attribution {
-  font-size: 11px;
-  text-align: center;
-}
-
-.attribution a {
-  color: #3e52a3;
 }
 /*# sourceMappingURL=style.css.map */
