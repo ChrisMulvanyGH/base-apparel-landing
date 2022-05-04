@@ -6,6 +6,8 @@
 *,
 *::before,
 *::after {
+  margin: 0;
+  padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
 }
@@ -15,7 +17,7 @@ body, h1, p {
 }
 
 body {
-  background-color: lightpink;
+  background-image: linear-gradient(135deg, white, #fff5f5);
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1em;
   font-weight: 400;
@@ -36,24 +38,10 @@ p {
 }
 
 /*--*/
-.col {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.jc-center {
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-/*--*/
 .container {
+  width: 90%;
+  max-width: 375px;
+  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -64,15 +52,17 @@ p {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 90vw;
-  height: 100vh;
-  max-width: 375px;
   margin: 0 auto;
 }
 
 .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
-  max-width: 375px;
   height: 84px;
   background-color: white;
 }
@@ -83,7 +73,7 @@ p {
   max-height: 21px;
 }
 
-.hero {
+.mob-hero {
   background-color: white;
 }
 
@@ -116,7 +106,7 @@ p {
   margin-bottom: 2.5em;
 }
 
-.detail .form {
+.detail .subForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -130,7 +120,7 @@ p {
   border: 1px solid #ce9797;
 }
 
-.detail .form .emailAddr {
+.detail .subForm .emailAddr {
   width: 100%;
   height: 3rem;
   padding-left: 1.5rem;
@@ -140,31 +130,31 @@ p {
   outline: none;
 }
 
-.detail .form .emailAddr::-webkit-input-placeholder {
+.detail .subForm .emailAddr::-webkit-input-placeholder {
   font-size: 1em;
   font-family: 'Josefin Sans', sans-serif;
   color: #ce9797;
 }
 
-.detail .form .emailAddr:-ms-input-placeholder {
+.detail .subForm .emailAddr:-ms-input-placeholder {
   font-size: 1em;
   font-family: 'Josefin Sans', sans-serif;
   color: #ce9797;
 }
 
-.detail .form .emailAddr::-ms-input-placeholder {
+.detail .subForm .emailAddr::-ms-input-placeholder {
   font-size: 1em;
   font-family: 'Josefin Sans', sans-serif;
   color: #ce9797;
 }
 
-.detail .form .emailAddr::placeholder {
+.detail .subForm .emailAddr::placeholder {
   font-size: 1em;
   font-family: 'Josefin Sans', sans-serif;
   color: #ce9797;
 }
 
-.detail .form .subBtn {
+.detail .subForm .subBtn {
   top: 0;
   width: 4.5rem;
   height: 49px;
@@ -176,5 +166,24 @@ p {
   -webkit-box-shadow: 0px 15px 20px rgba(198, 108, 108, 0.25);
           box-shadow: 0px 15px 20px rgba(198, 108, 108, 0.25);
   cursor: pointer;
+}
+
+.detail .msg-hide {
+  display: none;
+}
+
+.detail .msg-show {
+  display: block;
+  margin-top: 0.5rem;
+  color: #ce9797;
+}
+
+@media (max-width: 1440px) {
+  .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 1440px;
+  }
 }
 /*# sourceMappingURL=style.css.map */

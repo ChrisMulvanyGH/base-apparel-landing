@@ -8,42 +8,40 @@
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
   <title>Frontend Mentor | Base Apparel coming soon page</title>
   <link rel="stylesheet" href="dist/css/style.css">
-  <!-- <script src="./main.js" defer></script> -->
+  <script src="./main.js" defer></script>
 </head>
 
-<body>
-  <main class="container">
+<body> 
+  <main>
+    <article class="container">
+      <header class="header">
+        <img class="logo" src="./images/logo.svg" alt="Base Apparel">
+      </header>
+  
+      <div class="mob-hero">
+        <img src="./images/hero-mobile.jpg" alt="Image young woman">
+      </div>  
+  
+      <section class="detail">
+        <h1 class="title"><span class="top-line">We're</span> coming soon</h1>
+        <p class="desc">Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our launch deals.</p>
+  
+        <form action="" class="subForm">
+          <input type="email" placeholder="Email Address" class="emailAddr">
+          <button type="submit" class="subBtn"><img src="images/icon-arrow.svg" alt="Submit Form"></button>
+        </form>
+  
+        <div class="msg msg-hide"></div>
+      </section> 
 
-    <header class="header col jc-center">
-      <img class="logo" src="./images/logo.svg" alt="Base Apparel">
-    </header>
-
-    <div class="hero">
-      <img src="./images/hero-mobile.jpg" alt="Image young woman">
-    </div>  
-
-    <div class="detail">
-      <h1 class="title"><span class="top-line">We're</span> coming soon</h1>
-      <p class="desc">Hello fellow shoppers! We're currently building our new fashion store.
-          Add your email below to stay up-to-date with announcements and our launch deals.</p>
-
-      <form action="" class="form" id="subscribeForm">
-        <input type="email" placeholder="Email Address" class="emailAddr" id="emailField" required>
-        <button type="submit" class="subBtn" id="submitBtn">></button>
-      </form>
-
-      <div class="formMsg"></div>
-
-    </div>  
-
-      
-
-      <!-- <footer>
-        <p class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-          Coded by <a href="https://www.chrismulvany.com">Chris Mulvany</a>.
-        </p>
-      </footer> -->
+        <footer>
+          <p class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="https://www.chrismulvany.com">Chris Mulvany</a>.
+          </p>
+        </footer>
+    </article>
 
   </main>
 </body>

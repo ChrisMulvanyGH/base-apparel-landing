@@ -20,6 +20,8 @@ $desktop: 1440px;
 *,
 *::before,
 *::after {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
@@ -28,7 +30,8 @@ body, h1, p {
 }
 
 body {
-    background-color: lightpink;
+    // background-color: $offWhite;
+    background-image: linear-gradient(135deg, white, #fff5f5);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1em;
     font-weight: 400;
@@ -51,30 +54,20 @@ p {
 
 /*--*/
 
-.col {
-    display: flex;
-    flex-direction: column;
-}
-
-.jc-center {
-    justify-content: center;
-}
-
-/*--*/
-
 .container{
+    width: 90%;
+    max-width: $mobile;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: 90vw;
-    height: 100vh;
-    max-width: $mobile;
     margin: 0 auto;
 }
 
 .header {
+    display: flex;
+    align-items: center;
     width: 100%;
-    max-width: $mobile;
     height: 84px;
     background-color: $white;
 
@@ -85,7 +78,7 @@ p {
     }
 }
 
-.hero {
+.mob-hero {
     background-color: $white;
 }
 
@@ -117,7 +110,7 @@ p {
         margin-bottom: 2.5em;
     }
     
-    .form {
+    .subForm {
         display: flex;
         justify-content: center;
         align-items: center;
@@ -153,4 +146,23 @@ p {
             cursor: pointer;
         }
     }
+
+    .msg-hide {
+        display: none;
+    }
+    
+    .msg-show {
+        display: block;
+        margin-top: 0.5rem;
+        color: $desatRed;
+    }
+
+}
+
+@media (max-width: 1440px) {
+    .container {
+        display: flex;
+        max-width: $desktop;
+    }
+
 }
