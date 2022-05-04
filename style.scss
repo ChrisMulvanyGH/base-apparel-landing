@@ -176,6 +176,17 @@ p {
     }
 }
 
+footer {
+    text-align: center;
+    font-size: .75rem;
+    color: $desatRed;
+}
+
+footer a {
+    color: $darkGrayRed;
+    text-decoration: none;
+}
+
 // @media (min-width: 1440px) {
 
 // }

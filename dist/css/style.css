@@ -206,4 +206,15 @@ p {
   margin-top: 0.5rem;
   color: #ce9797;
 }
+
+footer {
+  text-align: center;
+  font-size: .75rem;
+  color: #ce9797;
+}
+
+footer a {
+  color: #413a3a;
+  text-decoration: none;
+}
 /*# sourceMappingURL=style.css.map */
