@@ -25,13 +25,15 @@ $desktop: 1440px;
     box-sizing: border-box;
 }
 
-body, h1, p {
+body,
+h1,
+p {
     margin: 0;
 }
 
 body {
-    // background-color: $offWhite;
-    background-image: linear-gradient(135deg, white, #fff5f5);
+    background-color: $offWhite;
+    background-image: linear-gradient(135deg, $white, $offWhite);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 1em;
     font-weight: 400;
@@ -52,9 +54,9 @@ p {
 
 }
 
-/*--*/
+/* LAYOUT */
 
-.container{
+.container {
     width: 90%;
     max-width: $mobile;
     height: 100vh;
@@ -64,105 +66,116 @@ p {
     margin: 0 auto;
 }
 
-.header {
-    display: flex;
-    align-items: center;
+.sect-a {
     width: 100%;
-    height: 84px;
-    background-color: $white;
+    display: flex;
+    flex-direction: column;
 
-    .logo {
-        margin-left: 2rem;
-        max-width: 101px;
-        max-height: 21px;
-    }
-}
-
-.mob-hero {
-    background-color: $white;
-}
-
-.detail {
-    padding: 4.25em 1.6em;
-    text-align: center;
-    background-color: $white;
-    
-    .top-line {
-        display: block;
-        font-weight: 300;
-        letter-spacing: 1rem;
-        text-transform: uppercase;
-        color: $desatRed;
-    }
-
-    .title {
-        font-weight: 600;
-        letter-spacing: 1rem;
-        color: $darkGrayRed;
-        text-transform: uppercase;
-        margin-bottom: 30px;
-    }
-
-    .desc {
-        font-size: .84rem;
-        font-weight: 400;
-        color: $desatRed;
-        margin-bottom: 2.5em;
-    }
-    
-    .subForm {
+    .header {
         display: flex;
-        justify-content: center;
         align-items: center;
-        border-radius: 1.5rem;
-        border: 1px solid $desatRed;
+        width: 100%;
+        height: 84px;
+        background-color: $white;
 
-        .emailAddr {
-            width: 100%;
-            height: 3rem;
-            padding-left: 1.5rem;
-            background-color: transparent;
-            font-size: 1rem;
-            border: none;
-            outline: none;
+        .logo {
+            margin-left: 2rem;
+            max-width: 101px;
+            max-height: 21px;
         }
+    }
 
-        .emailAddr::placeholder {
-            font-size: 1em;
-            font-family: 'Josefin Sans', sans-serif;
+    .hero {
+        background-color: $white;
+
+        .hero-img {
+            width: 100%;
+        }
+    }
+}
+
+.sect-b {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+    .detail {
+        padding: 4.25em 1.6em;
+        text-align: center;
+        background-color: $white;
+
+        .top-line {
+            display: block;
+            font-weight: 300;
+            letter-spacing: 1rem;
+            text-transform: uppercase;
             color: $desatRed;
         }
-    
-        .subBtn {
-            top: 0;
-            width: 4.5rem;
-            height: 49px;
-            background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
-            font-size: 1.2rem;
-            color: $white;
-            border-style: none;
-            border-radius: 1.4rem;
-            box-shadow: 0px 15px 20px rgba(198, 108, 108, 0.25);
-            cursor: pointer;
+
+        .title {
+            font-weight: 600;
+            letter-spacing: 1rem;
+            color: $darkGrayRed;
+            text-transform: uppercase;
+            margin-bottom: 30px;
+        }
+
+        .desc {
+            font-size: .84rem;
+            font-weight: 400;
+            color: $desatRed;
+            margin-bottom: 2.5em;
+        }
+
+        .subForm {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border-radius: 1.5rem;
+            border: 1px solid $desatRed;
+
+            .subEmail {
+                width: 100%;
+                height: 3rem;
+                padding-left: 1.5rem;
+                background-color: transparent;
+                font-size: 1rem;
+                border: none;
+                outline: none;
+            }
+
+            .subEmail::placeholder {
+                font-size: 1em;
+                font-family: 'Josefin Sans', sans-serif;
+                color: $desatRed;
+            }
+
+            .subBtn {
+                top: 0;
+                width: 4.5rem;
+                height: 49px;
+                background-image: linear-gradient(135deg, hsl(0, 80%, 86%), hsl(0, 74%, 74%));
+                font-size: 1.2rem;
+                color: $white;
+                border-style: none;
+                border-radius: 1.4rem;
+                box-shadow: 0px 15px 20px rgba(198, 108, 108, 0.25);
+                cursor: pointer;
+            }
+        }
+
+        .msg-hide {
+            display: none;
+        }
+
+        .msg-show {
+            display: block;
+            margin-top: 0.5rem;
+            color: $desatRed;
         }
     }
-
-    .msg-hide {
-        display: none;
-    }
-    
-    .msg-show {
-        display: block;
-        margin-top: 0.5rem;
-        color: $desatRed;
-    }
-
 }
 
-@media (max-width: 1440px) {
-    .container {
-        display: flex;
-        max-width: $desktop;
-    }
+// @media (min-width: 1440px) {
 
-}
+// }

@@ -11,38 +11,46 @@
   <script src="./main.js" defer></script>
 </head>
 
-<body> 
+<body>
   <main>
     <article class="container">
-      <header class="header">
-        <img class="logo" src="./images/logo.svg" alt="Base Apparel">
-      </header>
-  
-      <div class="mob-hero">
-        <img src="./images/hero-mobile.jpg" alt="Image young woman">
-      </div>  
-  
-      <section class="detail">
-        <h1 class="title"><span class="top-line">We're</span> coming soon</h1>
-        <p class="desc">Hello fellow shoppers! We're currently building our new fashion store.
-            Add your email below to stay up-to-date with announcements and our launch deals.</p>
-  
-        <form action="" class="subForm">
-          <input type="email" placeholder="Email Address" class="emailAddr">
-          <button type="submit" class="subBtn"><img src="images/icon-arrow.svg" alt="Submit Form"></button>
-        </form>
-  
-        <div class="msg msg-hide"></div>
-      </section> 
+      <div class="sect-a">
+        <!-- ARTICLE HEADER -->
+        <header class="header">
+          <img class="logo" src="./images/logo.svg" alt="Base Apparel">
+        </header>
 
-        <footer>
-          <p class="attribution">
-            Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-            Coded by <a href="https://www.chrismulvany.com">Chris Mulvany</a>.
+        <!-- ASIDE HERO -->
+        <aside class="hero">
+          <img class="hero-img" src="./images/hero-mobile.jpg" alt="Image young woman">
+        </aside>
+      </div>
+
+      <div class="sect-b">
+        <!-- ARTICLE DETAIL -->
+        <article class="detail">
+          <h1 class="title"><span class="top-line">We're</span> coming soon</h1>
+          <p class="desc">Hello fellow shoppers! We're currently building our new fashion store.
+            Add your email below to stay up-to-date with announcements and our launch deals.
           </p>
-        </footer>
-    </article>
+          <!-- SUBSCRIBE FORM -->
+          <form action="" class="subForm">
+            <input type="email" placeholder="Email Address" class="subEmail">
+            <button type="submit" class="subBtn"><img src="images/icon-arrow.svg" alt="Submit Form"></button>
+          </form>
+          <!-- FORM NOTIFICATIONS -->
+          <div class="msg msg-hide"></div>
+        </article>
+      </div>
 
+      <!-- ARTICLE FOOTER -->
+      <footer>
+        <p class="attribution">
+          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+          Coded by <a href="https://www.chrismulvany.com">Chris Mulvany</a>.
+        </p>
+      </footer>
+    </article>
   </main>
 </body>
 
