@@ -12,44 +12,36 @@
 </head>
 
 <body>
-  <main>
-    <article class="container">
-      <div class="sect-a">
-        <!-- ARTICLE HEADER -->
-        <header class="header">
-          <img class="logo" src="./images/logo.svg" alt="Base Apparel">
-        </header>
+  <main class="container">
+    <header class="header">
+      <img class="header__logo" src="./images/logo.svg" alt="Base Apparel">
+    </header>
+    <!-- MAIN HERO -->
+    <div class="hero"></div>
+    <!-- MAIN ARTICLE -->
+    <article class="detail">
+      <h1 class="detail__title"><span class="detail__top-line">We're</span> coming soon</h1>
+      <p class="detail__desc">Hello fellow shoppers! We're currently building our new fashion store. Add your email below to stay up-to-date with announcements and our launch deals.</p>
+      <!-- ARTICLE SUBSCRIBE FORM -->
+      <form action="#" class="subForm">
+        <label for="subForm__email" class="subForm__label">Email Address</label>
+        <div class="subForm__email__container">
+          <input type="email" placeholder="Email Address" class="subForm__email">
+          <img src="/images/icon-error.svg" alt="Email Error!" class="subForm__error-icon">
+        </div>
+        <button type="submit" class="subForm__button"><img src="images/icon-arrow.svg" alt="Submit Form"></button>
+      </form>
+      <!-- FORM NOTIFICATIONS -->
+      <div class="msg msg-hide"></div>
+    </article>
 
-        <!-- ASIDE HERO -->
-        <aside class="hero">
-          <img class="hero-img" src="./images/hero-mobile.jpg" alt="Image young woman">
-        </aside>
-      </div>
-
-      <div class="sect-b">
-        <!-- ARTICLE DETAIL -->
-        <article class="detail">
-          <h1 class="title"><span class="top-line">We're</span> coming soon</h1>
-          <p class="desc">Hello fellow shoppers! We're currently building our new fashion store.
-            Add your email below to stay up-to-date with announcements and our launch deals.
-          </p>
-          <!-- SUBSCRIBE FORM -->
-          <form action="" class="subForm">
-            <input type="email" placeholder="Email Address" class="subEmail">
-            <button type="submit" class="subBtn"><img src="images/icon-arrow.svg" alt="Submit Form"></button>
-          </form>
-          <!-- FORM NOTIFICATIONS -->
-          <div class="msg msg-hide"></div>
-        </article>
-      </div>
-
-      <!-- ARTICLE FOOTER -->
-      <footer>
-        <p class="attribution">
-          Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
-          Coded by <a href="https://www.chrismulvany.com">Chris Mulvany</a>.
-        </p>
-      </footer>
+    <!-- FOOTER -->
+    <footer>
+      <p class="attribution">
+        Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+        Coded by <a href="https://www.chrismulvany.com">Chris Mulvany</a>.
+      </p>
+    </footer>
     </article>
   </main>
 </body>

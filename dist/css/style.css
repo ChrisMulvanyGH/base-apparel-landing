@@ -19,7 +19,6 @@ p {
 }
 
 body {
-  background-color: #fff5f5;
   background-image: linear-gradient(135deg, white, #fff5f5);
   font-family: 'Josefin Sans', sans-serif;
   font-size: 1em;
@@ -40,11 +39,10 @@ p {
   font-size: 1em;
 }
 
-/* LAYOUT */
+/* LAYOUT STYLES */
 .container {
-  width: 90%;
+  width: 95vw;
   max-width: 375px;
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -58,150 +56,146 @@ p {
   margin: 0 auto;
 }
 
-.sect-a {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.sect-a .header {
+.header {
+  padding: 1.875em 2em;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header .header__logo {
+  max-width: 6.3125em;
+  max-height: 1.3125em;
+}
+
+.hero {
   width: 100%;
-  height: 84px;
-  background-color: white;
+  padding: 8rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url(/images/hero-mobile.jpg);
 }
 
-.sect-a .header .logo {
-  margin-left: 2rem;
-  max-width: 101px;
-  max-height: 21px;
-}
-
-.sect-a .hero {
-  background-color: white;
-}
-
-.sect-a .hero .hero-img {
-  width: 100%;
-}
-
-.sect-b {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.sect-b .detail {
-  padding: 4.25em 1.6em;
+.detail {
+  padding: 3.75em 2em;
   text-align: center;
-  background-color: white;
 }
 
-.sect-b .detail .top-line {
+.detail .detail__top-line {
   display: block;
   font-weight: 300;
-  letter-spacing: 1rem;
+  letter-spacing: 0.625rem;
   text-transform: uppercase;
   color: #ce9797;
 }
 
-.sect-b .detail .title {
+.detail .detail__title {
+  font-size: 2.5rem;
   font-weight: 600;
-  letter-spacing: 1rem;
+  letter-spacing: 0.625rem;
+  line-height: 1.1;
   color: #413a3a;
   text-transform: uppercase;
-  margin-bottom: 30px;
+  margin-bottom: 18px;
 }
 
-.sect-b .detail .desc {
-  font-size: .84rem;
+.detail .detail__desc {
+  font-size: 0.875rem;
   font-weight: 400;
   color: #ce9797;
+  line-height: 1.5;
   margin-bottom: 2.5em;
 }
 
-.sect-b .detail .subForm {
+.detail .subForm {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 3rem;
+}
+
+.detail .subForm .subForm__label {
+  position: absolute;
+  visibility: hidden;
+}
+
+.detail .subForm .subForm__email__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  border-radius: 1.5rem;
-  border: 1px solid #ce9797;
-}
-
-.sect-b .detail .subForm .subEmail {
   width: 100%;
   height: 3rem;
-  padding-left: 1.5rem;
-  background-color: transparent;
-  font-size: 1rem;
-  border: none;
+}
+
+.detail .subForm .subForm__email {
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
   outline: none;
+  border: 1px solid rgba(206, 151, 151, 0.6);
+  padding-left: 2.4rem;
+  background-color: transparent;
 }
 
-.sect-b .detail .subForm .subEmail::-webkit-input-placeholder {
+.detail .subForm .subForm__email::-webkit-input-placeholder {
   font-size: 1em;
   font-family: 'Josefin Sans', sans-serif;
   color: #ce9797;
 }
 
-.sect-b .detail .subForm .subEmail:-ms-input-placeholder {
+.detail .subForm .subForm__email:-ms-input-placeholder {
   font-size: 1em;
   font-family: 'Josefin Sans', sans-serif;
   color: #ce9797;
 }
 
-.sect-b .detail .subForm .subEmail::-ms-input-placeholder {
+.detail .subForm .subForm__email::-ms-input-placeholder {
   font-size: 1em;
   font-family: 'Josefin Sans', sans-serif;
   color: #ce9797;
 }
 
-.sect-b .detail .subForm .subEmail::placeholder {
+.detail .subForm .subForm__email::placeholder {
   font-size: 1em;
   font-family: 'Josefin Sans', sans-serif;
   color: #ce9797;
 }
 
-.sect-b .detail .subForm .subBtn {
-  top: 0;
+.detail .subForm .subForm__error-icon {
+  position: absolute;
+  top: 10px;
+  right: 80px;
+  width: 1.5rem;
+  height: 1.5rem;
+  display: none;
+}
+
+.detail .subForm .subForm__button {
   width: 4.5rem;
   height: 49px;
+  position: absolute;
   background-image: linear-gradient(135deg, #f8bfbf, #ee8c8c);
-  font-size: 1.2rem;
-  color: white;
+  top: 0;
+  right: 0;
+  border-radius: 100px;
   border-style: none;
-  border-radius: 1.4rem;
   -webkit-box-shadow: 0px 15px 20px rgba(198, 108, 108, 0.25);
           box-shadow: 0px 15px 20px rgba(198, 108, 108, 0.25);
   cursor: pointer;
 }
 
-.sect-b .detail .msg-hide {
+.detail .error-icon-show {
+  display: block;
+}
+
+.detail .msg-hide {
   display: none;
 }
 
-.sect-b .detail .msg-show {
+.detail .msg-show {
   display: block;
   margin-top: 0.5rem;
   color: #ce9797;
