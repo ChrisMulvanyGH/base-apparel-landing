@@ -170,7 +170,6 @@ p {
   right: 80px;
   width: 1.5rem;
   height: 1.5rem;
-  display: none;
 }
 
 .detail .subForm .subForm__button {
@@ -187,7 +186,11 @@ p {
   cursor: pointer;
 }
 
-.detail .error-icon-show {
+.detail .icon-hide {
+  display: none;
+}
+
+.detail .icon-show {
   display: block;
 }
 

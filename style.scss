@@ -152,7 +152,6 @@ p {
             right: 80px;
             width: 1.5rem;
             height: 1.5rem;
-            display: none;
         }
 
         .subForm__button {
@@ -169,7 +168,11 @@ p {
         }
     }
 
-    .error-icon-show {
+    .icon-hide {
+        display: none;
+    }
+
+    .icon-show {
         display: block;
     }
 
